@@ -15,6 +15,7 @@
   <body>
     <div>
     <h1>Untriaged Ceph bugs known to affect OSP</h1>
+    <h4>Showing all Ceph bugs the OSP trackers depend on, which don't have a target release set</h4>
     <hr />
     <dl>
     % for tracker_bug in results.keys():
