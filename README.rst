@@ -1,13 +1,10 @@
 Report on Ceph bugs that block OSP's releases and are not triaged yet.
 
-Prerequisites:
+- Install the requirements ``pip install -r requirements.txt``
+- Might optionally create a .bugzillarc file [1]
 
-* Install the requirements ``pip install -r requirements.txt``
-* Create a bugzillarc file with credentials [1]
+1. https://github.com/python-bugzilla/python-bugzilla/blob/v2.2.0/bugzilla/base.py#L451
 
-  1. https://github.com/python-bugzilla/python-bugzilla/blob/v2.2.0/bugzilla/base.py#L451
+Run one of:
 
-Running:
-
-``python find.py`` from CLI
-``python web.py`` to user from WEB, go to 127.0.0.1:8080
+``python find.py`` from CLI or, if you want to host it as a webapp, ``python web.py`` then go to 127.0.0.1:8080
