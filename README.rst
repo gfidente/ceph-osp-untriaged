@@ -7,4 +7,4 @@ Report on Ceph bugs that block OSP's releases and are not triaged yet.
 
 Run one of:
 
-``python find.py`` from CLI or, if you want to host it as a webapp, ``python web.py`` then go to 127.0.0.1:8080
+``python find.py`` from CLI or, if you want to host it as a webapp, ``python app.py`` then go to 127.0.0.1:8080
