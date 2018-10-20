@@ -59,10 +59,10 @@ def main():
 
 
 if __name__ == '__main__':
-    print """
+    print("""
 Untriaged Ceph bugs known to affect OSP
 =======================================
-"""
+""")
     results = main()
     for tracker_bug in results.keys():
         print('%s - %s - %d '
