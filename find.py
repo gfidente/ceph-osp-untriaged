@@ -16,6 +16,7 @@ OSP_TRACKERS = [
     '1578729',
     '1594251',
     '1624388',
+    '1642481',
     ]
 
 bzapi = Bugzilla(BZ_URL)
