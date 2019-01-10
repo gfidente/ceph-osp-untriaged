@@ -35,13 +35,13 @@ def search(payload):
 def query_params(tracker):
     """ Return a dict of basic Bugzilla search parameters. """
     params = {
-        'include_fields': ['id', 'summary', 'status'],
+        'include_fields': ['id', 'summary', 'status', 'target_release'],
         'f1': 'blocked',
         'o1': 'equals',
         'v1': tracker,
-        'f2': 'target_release',
-        'o2': 'substring',
-        'v2': '.*',
+        'f2': 'bug_status',
+        'o2': 'notequals',
+        'v2': 'VERIFIED',
         'f3': 'bug_status',
         'o3': 'notequals',
         'v3': 'CLOSED'
@@ -61,8 +61,8 @@ def main():
 
 if __name__ == '__main__':
     print("""
-Untriaged Ceph bugs known to affect OSP
-=======================================
+Open Ceph bugs known to affect OSP
+==================================
 """)
     results = main()
     for tracker_bug in results.keys():
@@ -74,5 +74,5 @@ Untriaged Ceph bugs known to affect OSP
             print('\tNone found, congrats')
         else:
             for bug in results[tracker_bug]:
-                print('\thttps://bugzilla.redhat.com/%d - %s - %s'
-                      % (bug.id, bug.status, bug.summary))
+                print('\thttps://bugzilla.redhat.com/%d - %s - %s - %s'
+                      % (bug.id, bug.status, bug.target_release[0], bug.summary))
