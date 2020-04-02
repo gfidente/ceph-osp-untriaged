@@ -19,7 +19,7 @@
     <hr />
     <dl>
     % for tracker_bug in results.keys():
-      <dt><strong>{{tracker_bug.target_release[0]}} - {{tracker_bug.summary}} - {{tracker_bug.id}}</strong></dt>
+      <dt><strong>{{tracker_bug.target_release[0]}} - {{tracker_bug.summary}} - <a href="https://bugzilla.redhat.com/{{tracker_bug.id}}">{{tracker_bug.id}}</a></strong></dt>
       <dl>
         <dt><strong>Untriaged</strong></dt>
         % for bug in results[tracker_bug]:
