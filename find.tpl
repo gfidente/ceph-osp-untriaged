@@ -15,7 +15,6 @@
   <body>
     <div>
     <h1>Open Ceph bugs known to affect OSP</h1>
-    <h4>Showing all Ceph bugs the OSP trackers depend on</h4>
     <hr />
     <dl>
     % for tracker_bug in results.keys():
