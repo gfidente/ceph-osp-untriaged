@@ -9,6 +9,7 @@ BZ_URL = 'bugzilla.redhat.com'
 
 # order will determine output order as well
 OSP_TRACKERS = [
+    '2071977',
     '1820257',
     '1760354',
 #    '1642481',
