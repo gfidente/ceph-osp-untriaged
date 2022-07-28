@@ -7,7 +7,7 @@ import collections
 
 BZ_URL = 'bugzilla.redhat.com'
 
-# order will determine output order as well
+# list order will determine output order as well
 OSP_TRACKERS = [
     '2071977',
     '1820257',
@@ -38,7 +38,7 @@ def search(payload):
 def query_params(tracker):
     """ Return a dict of basic Bugzilla search parameters. """
     params = {
-        'include_fields': ['id', 'summary', 'status', 'target_release'],
+        'include_fields': ['id', 'summary', 'status', 'target_release', 'severity'],
         'f1': 'blocked',
         'o1': 'equals',
         'v1': tracker,
@@ -77,5 +77,5 @@ Open Ceph bugs known to affect OSP
             print('\tNone found, congrats')
         else:
             for bug in results[tracker_bug]:
-                print('\thttps://bugzilla.redhat.com/%d - %s - %s - %s'
-                      % (bug.id, bug.status, bug.target_release[0], bug.summary))
+                print('\thttps://bugzilla.redhat.com/%d - %s - %s - %s - %s'
+                      % (bug.id, bug.status, bug.target_release[0], bug.severity, bug.summary))

@@ -23,7 +23,7 @@
         <dt><strong>Untriaged</strong></dt>
         % for bug in results[tracker_bug]:
         % if "*" in bug.target_release[0]:
-        <dd><a href="https://bugzilla.redhat.com/{{bug.id}}">https://bugzilla.redhat.com/{{bug.id}}</a> - {{bug.status}} - {{bug.target_release[0]}} - {{bug.summary}}</dd>
+        <dd><a href="https://bugzilla.redhat.com/{{bug.id}}">https://bugzilla.redhat.com/{{bug.id}}</a> - {{bug.status}} - {{bug.target_release[0]}} - {{bug.severity}} - {{bug.summary}}</dd>
         % end
         % end
       </dl>
@@ -31,7 +31,7 @@
         <dt><strong>In progress</strong></dt>
         % for bug in results[tracker_bug]:
         % if "*" not in bug.target_release[0]:
-        <dd><a href="https://bugzilla.redhat.com/{{bug.id}}">https://bugzilla.redhat.com/{{bug.id}}</a> - {{bug.status}} - {{bug.target_release[0]}} - {{bug.summary}}</dd>
+        <dd><a href="https://bugzilla.redhat.com/{{bug.id}}">https://bugzilla.redhat.com/{{bug.id}}</a> - {{bug.status}} - {{bug.target_release[0]}} - {{bug.severity}} - {{bug.summary}}</dd>
         % end
         % end
       </dl>
